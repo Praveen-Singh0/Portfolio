@@ -9,8 +9,7 @@ overflow-y: scroll;
 }
 
 .main{
-  /* border: solid red; */
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+
   box-shadow: #0000006c 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
   border-radius: 43px;
@@ -18,8 +17,7 @@ overflow-y: scroll;
   padding: 130px 170px;
   display: flex;
   justify-content: center;
-  /* margin-top: 50px; */
-  /* background-color: white; */
+
 background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 .main div{
@@ -215,11 +213,12 @@ background-image: linear-gradient(315deg, #4c364e 0%, #191328 74%);
   background-image: linear-gradient(315deg, #814e87 50%, #054c7e 4%);
   transition: 0.4s;
 }
-.column:hover button{
+.column:hover #btn{
   opacity: 1;
 }
 
-.column button{
+#btn{
+  text-decoration: none;
  cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgb(251, 251, 251) 0px 1px 3px -1px;
   background-color: #FCFCFC;  
@@ -235,7 +234,7 @@ background-image: linear-gradient(315deg, #4c364e 0%, #191328 74%);
   font-size: 15px;
   border-radius: 10px; 
 }
-.column button:hover{
+#btn:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: rgb(116, 15, 15);
 }

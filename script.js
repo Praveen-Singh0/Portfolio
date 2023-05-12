@@ -123,6 +123,7 @@ function createUserCard(username){
 function getRepocard(repos){
 
   repos.forEach((repo)=>{
+
     const userIMG = `https://api.github.com/repos/PraveenSingh001/${repo.name}/contents/`;
 
     async function userimg(){
@@ -133,19 +134,31 @@ function getRepocard(repos){
     }
     userimg();
 
-    function imgDisplay(data1){     
-
+    function imgDisplay(data1){ 
       const reposEl = document.querySelector(".repos");
       const repoEl = document.createElement('div');
       repoEl.innerHTML = `<div class="column">
-      <img src="${data1[0].download_url}">                       
-      <div>${repo.name}<button>Go-Live</button></div> 
+      <img src="${data1[0].download_url}">
+      <div>${repo.name}<a href="https://github.com/Praveen-Singh0/${repo.name}" target= "_blank" id="btn" >Git-Code</a></div> 
       </div>`;
     
       reposEl.appendChild(repoEl);
+      
+      const click = document.getElementById("btn");
+      click.addEventListener("click", ()=>{
+
+       if(repo.name == "Password-Generator"){
+
+      }
+      })
+  
+      
     }
     
   });
+
+  
+  
 }
 
 
