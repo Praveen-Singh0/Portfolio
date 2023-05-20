@@ -77,8 +77,6 @@ function scrollFunction() {
 
 const apiURL = "https://api.github.com/users/";
 
-
-
 const main = document.querySelector('.repos');
 
 
@@ -88,11 +86,11 @@ getUser("PraveenSingh001");
 // //************ */
 
 async function getUser(username){
+  
   const resp = await fetch(apiURL + username);
   const respData = await resp.json();
   
   createUserCard(respData);
-
   getRepo(username);
 
   // console.log(respData);
@@ -101,8 +99,8 @@ async function getUser(username){
 async function getRepo(username){
     const resp = await fetch(apiURL + username + "/repos");
     const respData = await resp.json();
-      
-      getRepocard(respData);
+    getRepocard(respData);
+
     }
 
 
@@ -120,6 +118,8 @@ function createUserCard(username){
 
 //**************************** */
 
+
+
 function getRepocard(repos){
 
   repos.forEach((repo)=>{
@@ -129,6 +129,7 @@ function getRepocard(repos){
     async function userimg(){
       const resp1 = await fetch(userIMG);
       const respData1 = await resp1.json();
+
       imgDisplay(respData1);
     
     }
@@ -136,9 +137,13 @@ function getRepocard(repos){
 
     function imgDisplay(data1){ 
       const reposEl = document.querySelector(".repos");
+
       const repoEl = document.createElement('div');
+
+      // console.log(`${data1[0].download_url}`);  There is it 
+
       repoEl.innerHTML = `<div class="column">
-      <img src="${data1[0].download_url}">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDaM0YCWonfb-zBFN2mo3QzpP0Zr2e8VwBSlxMWhZ6AnnMXTnEHtSIeUipN8LrLRKJRmE&usqp=CAU">
       <div>${repo.name}<a href="https://github.com/Praveen-Singh0/${repo.name}" target= "_blank" id="btn" >Git-Code</a></div> 
       </div>`;
     
