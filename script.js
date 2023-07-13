@@ -73,6 +73,9 @@ function scrollFunction() {
   }
 }
 
+
+
+
 //*****************************************8 */
 
 const apiURL = "https://api.github.com/users/";
@@ -143,7 +146,7 @@ function getRepocard(repos){
       // console.log(`${data1[0].download_url}`);  There is it 
 
       repoEl.innerHTML = `<div class="column">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDaM0YCWonfb-zBFN2mo3QzpP0Zr2e8VwBSlxMWhZ6AnnMXTnEHtSIeUipN8LrLRKJRmE&usqp=CAU">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/8b1519109740421.5fda7fe4b66c6.png">
       <div>${repo.name}<a href="https://github.com/Praveen-Singh0/${repo.name}" target= "_blank" id="btn" >Git-Code</a></div> 
       </div>`;
     
